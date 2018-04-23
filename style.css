@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+}
+
+.menu-bar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    background-color: #226ea1;
+    z-index: 1;
+    top: 0;
+    left: -160px;
+    padding-top: 20px;
+    float: left;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #226ea1;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+.main {
+    font-size: 20px;
+    padding: 0px 10px;
+    position: fixed;
+    left: 0px;
+}

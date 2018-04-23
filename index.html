@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width">
+        <title></title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" >
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+
+        <div class="menu-bar">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+        </div>
+
+        <div class="main">
+            <i class="fas fa-bars menu-button"></i>
+            <h1>Welcome</h1>
+
+
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+        <script>
+$(document).ready(function() {
+    $(".menu-button").click(function (){
+        var menu = $(".menu-bar");
+        var main = $(".main");
+        if(menu.css("left") == "-160px") {
+            menu.animate({"left":"0px"}, "ease");
+            main.animate({"left":"160px"}, "ease");
+        }
+        else {
+            menu.animate({"left":"-160px"}, "ease");
+            main.animate({"left":"0px"}, "ease");
+        }
+    });
+});
+        </script>
+
+    </body>
+</html>
