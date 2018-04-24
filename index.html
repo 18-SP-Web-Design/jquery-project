@@ -19,6 +19,9 @@
             <h1>Welcome</h1>
 
 
+            <img id="ship-image" src="discovery.jpg" width="500px" />
+
+            <button id="show-btn">Show</button>
 
         </div>
 
@@ -38,6 +41,15 @@ $(document).ready(function() {
             main.animate({"left":"0px"}, "ease");
         }
     });
+
+    $img = $("#ship-image");
+    $btn = $("#show-btn");
+
+    $btn.click(function() {
+        $img.show("ease");
+        $btn.hide("ease");
+    });
+
 });
         </script>
 

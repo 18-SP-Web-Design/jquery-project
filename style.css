@@ -2,6 +2,10 @@ body {
     font-family: Arial;
 }
 
+#ship-image {
+    display: none;
+}
+
 .menu-bar {
     height: 100%;
     width: 160px;
