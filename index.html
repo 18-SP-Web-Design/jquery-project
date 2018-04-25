@@ -7,27 +7,37 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" >
         <link rel="stylesheet" href="style.css" type="text/css" />
     </head>
-    <body>
+        <body>
 
-        <div class="menu-bar">
-            <a href="#">Item 1</a>
-            <a href="#">Item 2</a>
-        </div>
+            <div class="menu-bar">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+            </div>
 
-        <div class="main">
-            <i class="fas fa-bars menu-button"></i>
-            <h1>Welcome</h1>
+            <div class="main">
+                <i class="fas fa-bars menu-button"></i>
+                <h1>Welcome</h1>
 
+                <table>
+                    <tr>
+                        <td><img id="enterprise" src="enterprise.jpg" /></td>
+                        <td><img id="discovery" src="discovery.jpg" /></td>
+                        <td><img id="defiant" src="defiant.jpg" /></td>
+                    </tr>
 
-            <img id="ship-image" src="discovery.jpg" width="500px" />
+                    <tr>
+                        <td><button class="btn" id="enterprise-btn">USS Enterprise</button></td>
+                        <td><button class="btn" id="discovery-btn">USS Discovery</button></td>
+                        <td><button class="btn" id="defiant-btn">USS Defiant</button></td>
+                    </tr>
+                </table>
 
-            <button id="show-btn">Show</button>
+            </div>
 
-        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+            <script src="main.js"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-
-        <script>
+            <script>
 $(document).ready(function() {
     $(".menu-button").click(function (){
         var menu = $(".menu-bar");
@@ -42,16 +52,30 @@ $(document).ready(function() {
         }
     });
 
-    $img = $("#ship-image");
-    $btn = $("#show-btn");
-
-    $btn.click(function() {
-        $img.show("ease");
-        $btn.hide("ease");
+    $("#enterprise-btn").click(function() {
+        $("button").hide("ease");
+        $("#discovery").hide("ease");
+        $("#defiant").hide("ease");
+        $("#enterprise").animate({"width":"800px"}, "ease");
     });
 
-});
-        </script>
+    $("#discovery-btn").click(function() {
+        $("button").hide("ease");
+        $("#defiant").hide("ease");
+        $("#enterprise").hide("ease");
+        $("#discovery").animate({"width":"800px"}, "ease");
+    });
+    $("#defiant-btn").click(function() {
+        $("button").hide("ease");
+        $("#enterprise").hide("ease");
+        $("#discovery").hide("ease");
+        $("#defiant").animate({"width":"800px"}, "ease");
+    });
+        
 
-    </body>
+
+});
+            </script>
+
+        </body>
 </html>
